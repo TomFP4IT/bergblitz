@@ -1,0 +1,339 @@
+@import "@fontsource-variable/inter/opsz.css";
+@import "tailwindcss";
+@import "./motion.css";
+@import "./typography.css";
+@import "./state.css";
+
+@theme {
+  /* Surfaces */
+  --color-surface: #fafbfc;
+  --color-surface-elevated: #ffffff;
+  --color-surface-dark: #0c0c1d;
+  --color-surface-dark-elevated: #14142b;
+
+  /* Text */
+  --color-text: #3d4156;
+  --color-text-heading: #12132d;
+  --color-text-on-dark: #f0f0f5;
+  --color-muted: #6b7280;
+
+  /* Accent */
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-accent-glow: #818cf8;
+
+  /* Warm accent (from the passionfruit flesh) */
+  --color-warm: #f59e0b;
+  --color-warm-muted: #fbbf24;
+
+  /* Borders */
+  --color-border: #e2e4eb;
+
+  /* Font families */
+  --font-heading: "Inter Variable", system-ui, sans-serif;
+  --font-body: "Inter Variable", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Fira Code", monospace;
+
+  /* Type scale: perfect fourth (1.333) anchored at body. text-body-lg is a half-step bump for lead paragraphs. */
+  --text-display: clamp(3.157rem, 5vw + 1.75rem, 4rem);
+  --text-h1: clamp(2.369rem, 3vw + 1.5rem, 3rem);
+  --text-h2: clamp(1.777rem, 2vw + 1.25rem, 2.25rem);
+  --text-h3: clamp(1.333rem, 1vw + 1.1rem, 1.5rem);
+  --text-body-lg: clamp(1.125rem, 0.5vw + 1rem, 1.25rem);
+  --text-body: clamp(1rem, 0.25vw + 0.95rem, 1.0625rem);
+  --text-body-sm: clamp(0.875rem, 0.1vw + 0.85rem, 0.9rem);
+  --text-caption: clamp(0.75rem, 0.05vw + 0.72rem, 0.8rem);
+  --text-eyebrow: clamp(0.6875rem, 0.05vw + 0.65rem, 0.7rem);
+
+  /* Leading (line-height) tokens */
+  --leading-display: 1.05;
+  --leading-heading: 1.15;
+  --leading-body: 1.6;
+  --leading-caption: 1.4;
+
+  /* Tracking */
+  --tracking-tight: -0.025em;
+  --tracking-tighter: -0.04em;
+  --tracking-display: -0.05em;
+
+  /* Spacing scale — 4px base */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Radii */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  --radius-button: var(--radius-md);
+  --radius-card: var(--radius-xl);
+
+  /* Transitions */
+  /* Motion duration tokens */
+  --duration-instant: 80ms;
+  --duration-quick: 150ms;
+  --duration-base: 240ms;
+  --duration-slow: 400ms;
+
+  /* Back-compat aliases for legacy consumers; values redirected to new semantic tokens.
+     Note: --transition-normal: 300ms → 240ms, --transition-slow: 500ms → 400ms. */
+  --transition-fast: var(--duration-quick);
+  --transition-normal: var(--duration-base);
+  --transition-slow: var(--duration-slow);
+
+  /* Easing — Material 3-style intent-tied curves */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1);
+  --ease-enter: cubic-bezier(0, 0, 0, 1);
+  --ease-exit: cubic-bezier(0.3, 0, 1, 1);
+
+  /* Back-compat aliases for existing consumers */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Section padding tokens */
+  --space-section-sm: clamp(3rem, 5vw, 4rem);
+  --space-section-md: clamp(4rem, 7vw, 6rem);
+  --space-section-lg: clamp(6rem, 10vw, 9rem);
+
+  /* State surface tokens — alias palette where a match exists */
+  --color-skeleton-base: var(--color-border);
+  --color-skeleton-shimmer: var(--color-text-on-dark);
+  --color-state-warning: var(--color-warm);
+  --color-state-error: #dc2626;
+  --color-state-info: var(--color-accent);
+
+  /* Overlay scrim tokens — used to keep text legible over photographic
+     backgrounds (e.g. AsymmetricHero fullbleed). Tokenised so dark-mode
+     work can swap the ramp without touching components. */
+  --color-overlay-scrim-strong: rgba(0, 0, 0, 0.65);
+  --color-overlay-scrim-mid: rgba(0, 0, 0, 0.25);
+  --color-overlay-scrim-clear: rgba(0, 0, 0, 0);
+
+  /* Card hover lift shadow — used by the standardized card micro-interaction
+     in motion.css. Tokenised so dark-mode work can swap it. */
+  --color-shadow-lift: rgba(0, 0, 0, 0.15);
+
+  /* 12-col grid utility tokens */
+  --grid-cols-12: repeat(12, minmax(0, 1fr));
+  --grid-gap-sm: var(--space-2);
+  --grid-gap-md: var(--space-4);
+  --grid-gap-lg: var(--space-6);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer base {
+  a {
+    color: var(--color-accent);
+    transition: color var(--transition-fast) var(--ease-default);
+  }
+  a:hover {
+    color: var(--color-accent-hover);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: white;
+  }
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+@layer components {
+  .container {
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-inline: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      padding-inline: 2.5rem;
+    }
+  }
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+@layer components {
+  .card {
+    background: var(--color-surface-elevated);
+    border-radius: var(--radius-card);
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    transition:
+      border-color var(--transition-normal) var(--ease-default),
+      box-shadow var(--transition-normal) var(--ease-default);
+  }
+
+  .card:hover {
+    border-color: color-mix(
+      in srgb,
+      var(--color-accent) 30%,
+      var(--color-border)
+    );
+    box-shadow: 0 8px 30px rgb(99 102 241 / 0.08);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-card);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-card);
+  }
+}
+
+/* ============================================================
+   BUTTONS (enhanced)
+   ============================================================ */
+
+@layer components {
+  .btn-glow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-glow::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      var(--color-accent-glow),
+      var(--color-accent),
+      var(--color-accent-hover)
+    );
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--transition-normal) var(--ease-default);
+  }
+
+  .btn-glow:hover::before {
+    opacity: 1;
+  }
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITIES
+   ============================================================ */
+
+@layer utilities {
+  .text-display {
+    font-size: var(--text-display);
+    line-height: 1.05;
+    letter-spacing: var(--tracking-display);
+    font-weight: 800;
+  }
+
+  .text-h1 {
+    font-size: var(--text-h1);
+    line-height: 1.1;
+    letter-spacing: var(--tracking-tighter);
+  }
+
+  .text-h2 {
+    font-size: var(--text-h2);
+    line-height: 1.15;
+    letter-spacing: var(--tracking-tight);
+  }
+
+  .text-h3 {
+    font-size: var(--text-h3);
+    line-height: 1.25;
+    letter-spacing: var(--tracking-tight);
+  }
+
+  .text-body-lg {
+    font-size: var(--text-body-lg);
+    line-height: 1.7;
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      var(--color-accent-glow),
+      var(--color-accent),
+      var(--color-warm)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* ============================================================
+   SECTION EYEBROW
+   ============================================================ */
+
+@layer components {
+  .eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+}
+
+/* ============================================================
+   DECORATIVE
+   ============================================================ */
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .noise {
+    position: relative;
+  }
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.015;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+}

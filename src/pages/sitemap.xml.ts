@@ -1,14 +1,6 @@
-import { getCollection, type CollectionEntry } from "astro:content";
 import type { APIRoute } from "astro";
-import {
-  PAGES,
-  findPageByKey,
-  type CollectionName,
-  type PageKey,
-} from "~/lib/page-registry";
+import { PAGES } from "~/lib/page-registry";
 import { getLocalizedPath, type Locale } from "~/i18n";
-
-const LOCALES: Locale[] = ["de", "en"];
 
 type UrlBlock = {
   deUrl: string;
@@ -40,7 +32,7 @@ function collectStaticBlocks(site: URL): string[] {
   blocks.push(renderUrlBlock(homePair, deHome));
   blocks.push(renderUrlBlock(homePair, enHome));
 
-  // Static pages from registry
+  // Static pages from registry (exclude noindex pages)
   for (const page of PAGES) {
     if ("noindex" in page && page.noindex) continue;
     const deUrl = buildUrl(site, "de", page.slug.de);
@@ -53,106 +45,10 @@ function collectStaticBlocks(site: URL): string[] {
   return blocks;
 }
 
-type AnyEntry =
-  | CollectionEntry<"blog">
-  | CollectionEntry<"team">
-  | CollectionEntry<"pages">
-  | CollectionEntry<"careers">
-  | CollectionEntry<"events">
-  | CollectionEntry<"caseStudies">;
+export const GET: APIRoute = ({ site }) => {
+  const siteUrl = site ?? new URL("https://arberblitz.de");
 
-const COLLECTION_REGISTRY_KEY: Record<CollectionName, PageKey> = {
-  blog: "blog-index",
-  team: "team",
-  pages: "about",
-  careers: "careers-index",
-  events: "events-index",
-  caseStudies: "case-studies-index",
-};
-
-function collectCollectionBlocks(
-  site: URL,
-  collectionName: CollectionName,
-  entries: AnyEntry[],
-): string[] {
-  const registryKey = COLLECTION_REGISTRY_KEY[collectionName];
-  const pageEntry = findPageByKey(registryKey);
-
-  // Group entries by translationKey
-  const byKey = new Map<
-    string,
-    Partial<Record<Locale, { locale: Locale; slug: string }>>
-  >();
-
-  for (const entry of entries) {
-    const slashIndex = entry.id.indexOf("/");
-    if (slashIndex === -1) continue;
-
-    const entryLocale = entry.id.slice(0, slashIndex) as Locale;
-    const entrySlug = entry.id.slice(slashIndex + 1);
-
-    if (!LOCALES.includes(entryLocale)) continue;
-
-    const { translationKey } = entry.data as { translationKey: string };
-
-    if (!byKey.has(translationKey)) {
-      byKey.set(translationKey, {});
-    }
-
-    byKey.get(translationKey)![entryLocale] = {
-      locale: entryLocale,
-      slug: entrySlug,
-    };
-  }
-
-  const blocks: string[] = [];
-
-  for (const [, localeMap] of byKey) {
-    const deEntry = localeMap["de"];
-    const enEntry = localeMap["en"];
-
-    if (!deEntry && !enEntry) continue;
-
-    const deParent = pageEntry?.slug["de"] ?? registryKey;
-    const enParent = pageEntry?.slug["en"] ?? registryKey;
-
-    const deUrl = deEntry
-      ? buildUrl(site, "de", `${deParent}/${deEntry.slug}`)
-      : buildUrl(site, "de", deParent);
-    const enUrl = enEntry
-      ? buildUrl(site, "en", `${enParent}/${enEntry.slug}`)
-      : buildUrl(site, "en", enParent);
-
-    const pair: UrlBlock = { deUrl, enUrl };
-
-    if (deEntry) blocks.push(renderUrlBlock(pair, deUrl));
-    if (enEntry) blocks.push(renderUrlBlock(pair, enUrl));
-  }
-
-  return blocks;
-}
-
-export const GET: APIRoute = async ({ site }) => {
-  // `site` is set in astro.config.mjs; this fallback only guards local/test
-  // runs without it. Mirrors the config default rather than any brand domain.
-  const siteUrl = site ?? new URL("https://example.com");
-
-  const [blog, team, careers, events, caseStudies] = await Promise.all([
-    getCollection("blog"),
-    getCollection("team"),
-    getCollection("careers"),
-    getCollection("events"),
-    getCollection("caseStudies"),
-  ]);
-
-  const urlBlocks: string[] = [
-    ...collectStaticBlocks(siteUrl),
-    ...collectCollectionBlocks(siteUrl, "blog", blog),
-    ...collectCollectionBlocks(siteUrl, "team", team),
-    ...collectCollectionBlocks(siteUrl, "careers", careers),
-    ...collectCollectionBlocks(siteUrl, "events", events),
-    ...collectCollectionBlocks(siteUrl, "caseStudies", caseStudies),
-  ];
+  const urlBlocks = collectStaticBlocks(siteUrl);
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset

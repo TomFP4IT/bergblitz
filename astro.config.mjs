@@ -25,7 +25,7 @@ const externalLinks = {
 };
 
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://arberblitz.de",
   output: "static",
   compressHTML: true,
   trailingSlash: "always",

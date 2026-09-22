@@ -5,7 +5,6 @@ import type { Locale } from "~/i18n";
 import { useTranslations, getLocalizedPath } from "~/i18n";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import Button from "~/components/Button.astro";
-import TeamCard from "~/components/TeamCard.astro";
 import { getAlternateCollectionSlug } from "~/lib/page-registry";
 import { ArrowRight, Shield, Eye, Zap, Heart } from "@lucide/astro";
 
@@ -18,11 +17,6 @@ const { lang, currentSlug } = Astro.props;
 const { t } = useTranslations(lang);
 
 const alternateSlug = await getAlternateCollectionSlug(lang, "pages", "about");
-
-const allMembers = await getCollection("team");
-const members = allMembers
-  .filter((m) => m.id.startsWith(`${lang}/`))
-  .sort((a, b) => a.data.displayOrder - b.data.displayOrder);
 
 const pagesEntries = await getCollection("pages");
 const heroImage = pagesEntries.find(
@@ -174,46 +168,6 @@ const stats = [
             </div>
           ))
         }
-      </div>
-    </div>
-  </section>
-
-  <!-- Team preview -->
-  <section
-    class="py-28 md:py-36 bg-surface-dark noise relative overflow-hidden"
-  >
-    <div
-      class="absolute top-0 left-1/3 w-[500px] h-[500px] rounded-full bg-accent/10 blur-[140px] -translate-y-1/2"
-    >
-    </div>
-    <div class="container relative z-10">
-      <div class="text-center anim-slide-up">
-        <p class="eyebrow text-accent-glow">{t("team.title")}</p>
-        <h2 class="text-h2 text-text-on-dark mt-4">{t("team.description")}</h2>
-      </div>
-
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-16">
-        {
-          members.map((member, i) => (
-            <div class="anim-card-enter" style={`--delay: ${i * 100}ms`}>
-              <TeamCard entry={member} lang={lang} />
-            </div>
-          ))
-        }
-      </div>
-
-      <div class="text-center mt-12 anim-fade">
-        <Button
-          href={getLocalizedPath("team", lang)}
-          variant="secondary"
-          tone="on-dark"
-          class="group"
-        >
-          {t("navigation.team")}
-          <ArrowRight
-            class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-          />
-        </Button>
       </div>
     </div>
   </section>

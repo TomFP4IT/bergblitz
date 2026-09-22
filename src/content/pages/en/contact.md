@@ -1,15 +1,16 @@
 ---
 translationKey: "contact"
 title: "Contact"
-description: "Get in touch — we look forward to your project."
+description: "Get in touch with SC Bodenmais — for all questions about the Arberblitz."
 ---
 
-## Write to Us
+## Contact
 
-Have a project in mind? We'd love to hear from you. Use the contact form or send us an email directly.
+For questions about registration, the race, or categories, we are happy to help.
 
-## How to Reach Us
+**SC Bodenmais — Skiclub Bodenmais e.V.**
 
-- **Email:** hello@example.com
-- **Phone:** +49 123 456 789
-- **Address:** Musterstraße 1, 12345 Musterstadt
+- **Address:** Klause 39, 94249 Bodenmais
+- **Phone:** +49 (0)9924/770-0717
+- **Mobile:** +49 (0)15172976195
+- **Email:** service@sc-bodenmais.de

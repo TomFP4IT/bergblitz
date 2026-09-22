@@ -1,29 +1,42 @@
 ---
 translationKey: "imprint"
 title: "Imprint"
-description: "Legal information in accordance with § 5 TMG."
+description: "Legal notice for SC Bodenmais."
+noindex: true
 ---
 
-## Information in accordance with § 5 TMG
+## Information pursuant to § 5 TMG
 
-Greenleaf Digital
-Musterstraße 1
-12345 Musterstadt
+**SC Bodenmais — Skiclub Bodenmais e.V.**
+Klause 39
+94249 Bodenmais
+Germany
 
 ## Contact
 
-Phone: +49 123 456 789
-Email: hello@example.com
+- **Phone:** +49 (0)9924/770-0717
+- **Mobile:** +49 (0)15172976195
+- **Email:** service@sc-bodenmais.de
 
-## VAT ID
+## Register of Associations
 
-VAT identification number according to §27a of the German VAT Act:
-DE123456789
+Registered with the register of associations at Amtsgericht Deggendorf.
 
-## Responsible for content according to § 55 Abs. 2 RStV
+## Responsible for content pursuant to § 55 para. 2 RStV
 
-Anna Müller
-Musterstraße 1
-12345 Musterstadt
+SC Bodenmais — Skiclub Bodenmais e.V.
+Klause 39, 94249 Bodenmais
 
-_This imprint is a placeholder. Replace it with your own legally compliant imprint._
+## Disclaimer
+
+### Liability for content
+
+The content of our pages was created with the greatest care. However, we cannot guarantee the accuracy, completeness and timeliness of the content.
+
+### Liability for links
+
+Our offer contains links to external third-party websites over whose content we have no influence. Therefore, we cannot accept any liability for these external contents. The respective provider or operator of the linked pages is always responsible for their content.
+
+### Copyright
+
+The content and works created by the site operators on these pages are subject to German copyright law. Contributions from third parties are indicated as such.

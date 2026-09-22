@@ -35,7 +35,7 @@ import Header from "~/components/Header.astro";
 ---
 
 <!-- Light page -->
-<Header lang={lang} currentSlug="blog" alternateSlug="blog" />
+<Header lang={lang} currentSlug="ueber-uns" alternateSlug="about" />
 
 <!-- Dark hero page — header starts transparent, fills in on scroll -->
 <Header lang={lang} currentSlug="" alternateSlug="" variant="on-dark" />
@@ -43,23 +43,19 @@ import Header from "~/components/Header.astro";
 
 ## i18n keys
 
-| Key                      | DE                | EN                |
-| ------------------------ | ----------------- | ----------------- |
-| `site.name`              | Greenleaf Digital | Greenleaf Digital |
-| `navigation.home`        | Startseite        | Home              |
-| `navigation.about`       | Über uns          | About             |
-| `navigation.services`    | Leistungen        | Services          |
-| `navigation.blog`        | Blog              | Blog              |
-| `navigation.caseStudies` | Referenzen        | Case Studies      |
-| `navigation.team`        | Team              | Team              |
-| `navigation.contact`     | Kontakt           | Contact           |
+| Key                  | DE         | EN         |
+| -------------------- | ---------- | ---------- |
+| `site.name`          | Arberblitz | Arberblitz |
+| `navigation.home`    | Startseite | Home       |
+| `navigation.about`   | Über uns   | About      |
+| `navigation.contact` | Kontakt    | Contact    |
 
-Nav links are hardcoded as `navItems` in the component frontmatter. Localized slugs (`ueber-uns` ↔ `about`, `leistungen` ↔ `services`, etc.) are defined inline via `lang === "de"` ternaries — `page-registry.ts` is not imported; the two must be kept in sync manually.
+Nav links are hardcoded as `navItems` in the component frontmatter. Localized slugs (`ueber-uns` ↔ `about`, `kontakt` ↔ `contact`) are defined inline via `lang === "de"` ternaries — `page-registry.ts` is not imported; the two must be kept in sync manually.
 
 ## Gotchas
 
 - **Nav data source.** Nav items are a static array inside `Header.astro`, not derived from `page-registry.ts`. If you add or rename a page, update both `page-registry.ts` and the `navItems` array.
 - **Mobile menu JS.** The mobile toggle is driven by an inline `<script>` that re-initialises on `astro:after-swap`. If you add a second `Header` to a page the script will wire up duplicate listeners.
-- **Background state.** The script toggles a `data-solid` attribute on the header (`isOpen || scrollY > 80`); the `on-dark` variant styles it via `data-solid:` Tailwind variants. The menu-open condition is load-bearing: the open mobile menu grows the sticky header beyond the hero's `-mt-16` pull-up in `BaseLayout`, so a still-transparent header would show the light page body behind the menu links. On `on-light` pages the attribute is set but unstyled — the header stays `bg-surface/80` regardless.
+- **Background state.** The script toggles a `data-solid` attribute on the header (`isOpen || scrollY > 80`); the `on-dark` variant styles it via `data-solid:` Tailwind variants.
 - **Keyboard.** Pressing `Escape` while the mobile menu is open closes it and returns focus to the toggle button.
-- **No slots.** Header renders no `<slot />`. Extra content (e.g., banners) belongs above or below the `<Header />` call in the layout.
+- **No slots.** Header renders no `<slot />`. Extra content belongs above or below the `<Header />` call in the layout.

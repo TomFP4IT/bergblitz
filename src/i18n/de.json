@@ -1,49 +1,31 @@
 {
   "site": {
-    "name": "Greenleaf Digital",
-    "tagline": "Digitale Lösungen mit Leidenschaft",
-    "description": "Greenleaf Digital — Ihre Agentur für moderne Webprojekte."
+    "name": "Arberblitz",
+    "tagline": "Die Herausforderung für alle Radfahrer und Läufer",
+    "description": "Der Sommerblitz am Arber — das Uphill-Rennen für Mountainbiker, Gravelbiker und Trail Runner von Bodenmais zur Chamer Hütte. 17. Oktober 2026."
   },
   "navigation": {
     "home": "Startseite",
     "about": "Über uns",
-    "services": "Leistungen",
-    "blog": "Blog",
-    "caseStudies": "Referenzen",
-    "team": "Team",
     "contact": "Kontakt"
   },
   "footer": {
-    "copyright": "© {year} Greenleaf Digital. Alle Rechte vorbehalten.",
+    "copyright": "© {year} SC Bodenmais. Alle Rechte vorbehalten.",
     "builtWith": "Gebaut mit passionfruit",
     "privacy": "Datenschutz",
     "imprint": "Impressum"
   },
   "cta": {
     "contact": "Kontakt aufnehmen",
-    "readMore": "Weiterlesen",
-    "backToBlog": "Zurück zum Blog",
-    "backToTeam": "Zurück zum Team"
-  },
-  "blog": {
-    "title": "Blog",
-    "description": "Neuigkeiten und Einblicke",
-    "publishedAt": "Veröffentlicht am {date}",
-    "author": "Von {name}",
-    "readMore": "Weiterlesen",
-    "noPosts": "Noch keine Beiträge."
-  },
-  "team": {
-    "title": "Unser Team",
-    "description": "Lernen Sie unser Team kennen."
+    "readMore": "Weiterlesen"
   },
   "contact": {
     "title": "Kontakt",
     "description": "Nehmen Sie Kontakt mit uns auf.",
     "info": {
-      "email": "hello@example.com",
-      "phone": "+49 123 456 789",
-      "address": "Musterstraße 1, 12345 Musterstadt"
+      "email": "service@sc-bodenmais.de",
+      "phone": "+49 (0)9924/770-0717",
+      "address": "Klause 39, 94249 Bodenmais"
     },
     "form": {
       "name": "Name",
@@ -76,9 +58,9 @@
     },
     "empty": {
       "posts": {
-        "headline": "Noch keine Beiträge",
-        "body": "Hier entsteht in Kürze etwas. Bis dahin lohnt sich ein Blick auf unsere Leistungen.",
-        "cta": "Zu den Leistungen"
+        "headline": "Noch keine Einträge",
+        "body": "Hier entsteht in Kürze etwas.",
+        "cta": "Zur Startseite"
       },
       "filters": {
         "headline": "Keine Treffer für diese Auswahl",
@@ -108,75 +90,75 @@
   },
   "home": {
     "hero": {
-      "headline": "Digitale Lösungen mit Leidenschaft",
-      "subheadline": "Wir gestalten moderne Websites, die Ihr Unternehmen voranbringen.",
-      "cta": "Jetzt starten"
+      "headline": "Der Sommerblitz am Arber",
+      "subheadline": "Das Uphill-Rennen für Mountainbiker, Gravelbiker und Trail Runner — 17. Oktober 2026 ab Bodenmais zur Chamer Hütte.",
+      "cta": "Jetzt anmelden"
     },
     "features": {
-      "title": "Was wir bieten",
-      "subtitle": "Maßgeschneiderte digitale Lösungen für Ihr Unternehmen."
+      "title": "Was erwartet dich?",
+      "subtitle": "550 Höhenmeter · ~8 km · 17. Oktober 2026"
     },
     "testimonials": {
-      "title": "Was unsere Kunden sagen"
+      "title": "Das sagen die Teilnehmer"
     },
     "faq": {
       "title": "Häufig gestellte Fragen"
     },
     "ctaSection": {
-      "title": "Bereit für den nächsten Schritt?",
-      "subtitle": "Lassen Sie uns gemeinsam Ihre digitale Zukunft gestalten.",
-      "cta": "Kontakt aufnehmen"
+      "title": "Meld dich an und fordere dich heraus",
+      "subtitle": "Alle Infos und die Anmeldung direkt beim SC Bodenmais.",
+      "cta": "Zur Anmeldung"
     }
   },
   "services": {
-    "title": "Unsere Leistungen",
-    "description": "Entdecken Sie unser Leistungsangebot.",
+    "title": "Kategorien",
+    "description": "Für jeden die passende Herausforderung.",
     "webDesign": {
-      "title": "Webdesign",
-      "description": "Moderne, responsive Websites, die begeistern."
+      "title": "Mountainbike",
+      "description": "Die klassische Uphill-Wertung auf dem Mountainbike — ohne E-Bike-Unterstützung. Von der Clubhütte des SC Bodenmais (750 m) hinauf zur Chamer Hütte (1.300 m) über ~8 km und 550 Hm."
     },
     "development": {
-      "title": "Webentwicklung",
-      "description": "Technisch einwandfreie Lösungen mit modernsten Technologien."
+      "title": "Gravelbike",
+      "description": "Die Gravel-Wertung für alle, die auf breiten Reifen und robustem Rahmen fahren — ebenfalls ohne Motor. Gleiche Strecke, eigene Zeitwertung."
     },
     "consulting": {
-      "title": "Beratung",
-      "description": "Strategische Beratung für Ihre digitale Transformation."
+      "title": "Trail Running",
+      "description": "Wer die Berge lieber auf eigenen Beinen erklimmt, tritt in der Laufwertung an. Gleicher Startpunkt, gleicher Gipfel — nur mit Laufschuhen."
     }
   },
   "about": {
     "title": "Über uns",
-    "description": "Erfahren Sie mehr über Greenleaf Digital.",
+    "description": "Der SC Bodenmais und das Arberblitz-Rennen.",
     "story": {
-      "eyebrow": "Unsere Geschichte",
-      "title": "Wir glauben, dass jeder eine großartige Website verdient",
-      "text": "Greenleaf Digital wurde mit einer einfachen Idee gegründet: Professionelle Webentwicklung sollte für jeden zugänglich sein. Wir glauben, dass moderne Technologien und KI-gestützte Workflows die Art verändern, wie Websites entstehen — und dass diese Veränderung allen zugutekommen sollte."
+      "eyebrow": "Unser Event",
+      "title": "Bergauf — mit Vollgas oder auf eigenen Beinen",
+      "text": "Der Arberblitz ist das Sommer-Highlight des SC Bodenmais. Jedes Jahr im Oktober fordern sich Mountainbiker, Gravelbiker und Trail Runner auf der Strecke von Bodenmais zur Chamer Hütte heraus — 550 Höhenmeter, rund 8 Kilometer, und ein Ziel auf 1.300 Metern Höhe."
     },
     "values": {
       "eyebrow": "Unsere Werte",
       "title": "Was uns antreibt",
       "quality": {
-        "title": "Qualität vor Quantität",
-        "description": "Jedes Projekt verdient höchste Sorgfalt. Wir liefern keine Massenware, sondern maßgeschneiderte Lösungen."
+        "title": "Gemeinschaft",
+        "description": "Der SC Bodenmais steht für Sport, Zusammenhalt und Freude an der Bewegung in der Natur."
       },
       "transparency": {
-        "title": "Transparenz",
-        "description": "Offene Kommunikation in jedem Projektschritt. Keine versteckten Kosten, keine Überraschungen."
+        "title": "Fairness",
+        "description": "Klare Regeln, saubere Zeitnahme und offener Austausch unter allen Teilnehmenden."
       },
       "innovation": {
-        "title": "Innovation",
-        "description": "Wir nutzen die neuesten Technologien — nicht um des Trends willen, sondern weil sie bessere Ergebnisse liefern."
+        "title": "Natur erleben",
+        "description": "Der Bayerische Wald als Kulisse — die Strecke führt durch echte Berglandschaft."
       },
       "accessibility": {
-        "title": "Zugänglichkeit",
-        "description": "Unsere Websites sind für alle Menschen nutzbar. Barrierefreiheit ist kein Feature, sondern Standard."
+        "title": "Für alle",
+        "description": "Ob Leistungssportler oder Freizeitfahrer — beim Arberblitz ist jeder willkommen."
       }
     },
     "stats": {
-      "projects": "Projekte",
-      "satisfaction": "Kundenzufriedenheit",
-      "technologies": "Technologien",
-      "languages": "Sprachen"
+      "projects": "Teilnehmer",
+      "satisfaction": "Höhenmeter",
+      "technologies": "Kilometer",
+      "languages": "Kategorien"
     }
   },
   "legal": {
@@ -197,63 +179,5 @@
     "feature": "Merkmal",
     "yes": "Ja",
     "no": "Nein"
-  },
-  "careers": {
-    "title": "Karriere",
-    "description": "Werde Teil unseres Teams. Offene Stellen bei Greenleaf Digital.",
-    "apply": "Jetzt bewerben",
-    "openPosition": "Offene Position",
-    "postedOn": "Veröffentlicht am",
-    "closesOn": "Bewerbungsfrist",
-    "noOpenings": "Keine offenen Stellen aktuell",
-    "backToCareers": "Zurück zu Karriere",
-    "opensInNewTab": "Öffnet in einem neuen Tab",
-    "employmentType": {
-      "full-time": "Vollzeit",
-      "part-time": "Teilzeit",
-      "contractor": "Freiberuflich",
-      "internship": "Praktikum"
-    }
-  },
-  "events": {
-    "title": "Veranstaltungen",
-    "description": "Webinare, Workshops und Konferenzen von Greenleaf Digital.",
-    "noResults": "Keine Veranstaltungen gefunden.",
-    "register": "Jetzt anmelden",
-    "details": "Details ansehen",
-    "backToEvents": "Zurück zu den Veranstaltungen",
-    "dateTime": "Datum & Uhrzeit",
-    "speakers": "Referenten",
-    "openMap": "Auf Karte anzeigen",
-    "location": {
-      "online": "Online",
-      "inPerson": "Vor Ort",
-      "hybrid": "Hybrid (Vor Ort + Online)",
-      "atVenue": "Veranstaltungsort"
-    },
-    "filter": {
-      "category": "Kategorie",
-      "tag": "Thema"
-    }
-  },
-  "caseStudies": {
-    "title": "Referenzen",
-    "description": "Erfahren Sie, wie unsere Kunden von der Zusammenarbeit mit Greenleaf Digital profitieren.",
-    "noResults": "Keine Referenzen gefunden.",
-    "readMore": "Mehr lesen",
-    "watchInterview": "Interview ansehen",
-    "videoAvailable": "Video verfügbar",
-    "tagsLabel": "Themen",
-    "filterCategory": "Kategorie",
-    "filterTag": "Thema",
-    "backToCaseStudies": "Zurück zu den Referenzen",
-    "siblingNav": "Weitere Referenzen",
-    "previousReference": "Vorherige Referenz",
-    "nextReference": "Nächste Referenz",
-    "srName": "Name",
-    "srRole": "Position",
-    "srCompany": "Unternehmen",
-    "quoteOpen": "„",
-    "quoteClose": "“"
   }
 }

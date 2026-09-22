@@ -1,10 +1,14 @@
-# passionfruit
+# Arberblitz / SC Bodenmais
 
 ## 1. Project
 
-**This repo is the passionfruit template itself, not a site built from it.** passionfruit is a template that turns Claude Code into a web developer for non-technical users: they describe what they want, Claude builds it.
+**This is the website for Arberblitz**, the annual uphill mountain race by **SC Bodenmais (Skiclub Bodenmais)** taking place on **17 October 2026 in Bodenmais / Chamer Hütte, Bavaria**.
 
-The "Greenleaf Digital" branding, the blog posts, the team members, the services copy — all of that is **fixture content** that downstream consumers replace via `/onboard` and `/brand`. Treat it as example data, not customer content. When evaluating changes, ask "does this improve the template?", not "does Greenleaf need this?"
+Built on the passionfruit template. Active pages: **Home, Über uns (About), Kontakt (Contact), Impressum, Datenschutz**. No blog, no team page, no events collection, no case studies, no careers, no services page.
+
+The race covers ~8 km with 550 m elevation gain from the SC Bodenmais clubhouse (750 m) to Chamer Hütte (1,300 m). Three categories: Mountainbike, Gravelbike, Trail Running.
+
+Contact: service@sc-bodenmais.de · +49 (0)9924/770-0717 · +49 (0)15172976195 · Klause 39, 94249 Bodenmais
 
 ## 2. Self-improvement rule
 

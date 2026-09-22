@@ -1,49 +1,31 @@
 {
   "site": {
-    "name": "Greenleaf Digital",
-    "tagline": "Digital solutions with passion",
-    "description": "Greenleaf Digital — Your agency for modern web projects."
+    "name": "Arberblitz",
+    "tagline": "The challenge for all cyclists and runners",
+    "description": "The Sommerblitz at Arber — the uphill race for mountain bikers, gravel bikers and trail runners from Bodenmais to Chamer Hütte. 17 October 2026."
   },
   "navigation": {
     "home": "Home",
     "about": "About",
-    "services": "Services",
-    "blog": "Blog",
-    "caseStudies": "Case Studies",
-    "team": "Team",
     "contact": "Contact"
   },
   "footer": {
-    "copyright": "© {year} Greenleaf Digital. All rights reserved.",
+    "copyright": "© {year} SC Bodenmais. All rights reserved.",
     "builtWith": "Built with passionfruit",
     "privacy": "Privacy Policy",
     "imprint": "Imprint"
   },
   "cta": {
     "contact": "Get in touch",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog",
-    "backToTeam": "Back to Team"
-  },
-  "blog": {
-    "title": "Blog",
-    "description": "News and insights",
-    "publishedAt": "Published on {date}",
-    "author": "By {name}",
-    "readMore": "Read more",
-    "noPosts": "No posts yet."
-  },
-  "team": {
-    "title": "Our Team",
-    "description": "Meet our team."
+    "readMore": "Read more"
   },
   "contact": {
     "title": "Contact",
     "description": "Get in touch with us.",
     "info": {
-      "email": "hello@example.com",
-      "phone": "+49 123 456 789",
-      "address": "Musterstraße 1, 12345 Musterstadt"
+      "email": "service@sc-bodenmais.de",
+      "phone": "+49 (0)9924/770-0717",
+      "address": "Klause 39, 94249 Bodenmais"
     },
     "form": {
       "name": "Name",
@@ -76,9 +58,9 @@
     },
     "empty": {
       "posts": {
-        "headline": "No posts yet",
-        "body": "Something will land here soon. In the meantime, take a look at what we offer.",
-        "cta": "See our services"
+        "headline": "No entries yet",
+        "body": "Something will land here soon.",
+        "cta": "Back to home"
       },
       "filters": {
         "headline": "No matches for this selection",
@@ -108,75 +90,75 @@
   },
   "home": {
     "hero": {
-      "headline": "Digital solutions with passion",
-      "subheadline": "We build modern websites that drive your business forward.",
-      "cta": "Get started"
+      "headline": "The Sommerblitz at Arber",
+      "subheadline": "The uphill race for mountain bikers, gravel bikers and trail runners — 17 October 2026, starting in Bodenmais up to Chamer Hütte.",
+      "cta": "Register now"
     },
     "features": {
-      "title": "What we offer",
-      "subtitle": "Tailored digital solutions for your business."
+      "title": "What to expect",
+      "subtitle": "550 m elevation gain · ~8 km · 17 October 2026"
     },
     "testimonials": {
-      "title": "What our clients say"
+      "title": "What participants say"
     },
     "faq": {
       "title": "Frequently asked questions"
     },
     "ctaSection": {
-      "title": "Ready for the next step?",
-      "subtitle": "Let's shape your digital future together.",
-      "cta": "Get in touch"
+      "title": "Sign up and challenge yourself",
+      "subtitle": "All details and registration directly with SC Bodenmais.",
+      "cta": "Register"
     }
   },
   "services": {
-    "title": "Our Services",
-    "description": "Discover our range of services.",
+    "title": "Categories",
+    "description": "The right challenge for everyone.",
     "webDesign": {
-      "title": "Web Design",
-      "description": "Modern, responsive websites that delight."
+      "title": "Mountain Bike",
+      "description": "The classic uphill timed segment on a mountain bike — no e-bikes. From SC Bodenmais clubhouse (750 m) up to Chamer Hütte (1,300 m), ~8 km and 550 m elevation gain."
     },
     "development": {
-      "title": "Web Development",
-      "description": "Technically excellent solutions with cutting-edge technologies."
+      "title": "Gravel Bike",
+      "description": "The gravel category for those riding wide tyres and robust frames — also without motor assistance. Same route, separate timed classification."
     },
     "consulting": {
-      "title": "Consulting",
-      "description": "Strategic consulting for your digital transformation."
+      "title": "Trail Running",
+      "description": "Those who prefer to conquer mountains on foot compete in the running category. Same start, same summit — just in running shoes."
     }
   },
   "about": {
     "title": "About Us",
-    "description": "Learn more about Greenleaf Digital.",
+    "description": "SC Bodenmais and the Arberblitz race.",
     "story": {
-      "eyebrow": "Our Story",
-      "title": "We believe everyone deserves a great website",
-      "text": "Greenleaf Digital was founded on a simple idea: professional web development should be accessible to everyone. We believe modern technologies and AI-powered workflows are changing the way websites are built — and that this change should benefit everyone."
+      "eyebrow": "Our Event",
+      "title": "Uphill — flat out or on your own two feet",
+      "text": "The Arberblitz is SC Bodenmais's summer highlight. Every October, mountain bikers, gravel bikers and trail runners take on the route from Bodenmais to Chamer Hütte — 550 metres of climbing, around 8 kilometres, and a finish at 1,300 metres altitude."
     },
     "values": {
       "eyebrow": "Our Values",
       "title": "What drives us",
       "quality": {
-        "title": "Quality over quantity",
-        "description": "Every project deserves the highest care. We don't do mass production — we deliver tailored solutions."
+        "title": "Community",
+        "description": "SC Bodenmais stands for sport, togetherness and joy of movement in nature."
       },
       "transparency": {
-        "title": "Transparency",
-        "description": "Open communication at every project step. No hidden costs, no surprises."
+        "title": "Fairness",
+        "description": "Clear rules, accurate timing, and open exchange among all participants."
       },
       "innovation": {
-        "title": "Innovation",
-        "description": "We use the latest technologies — not for trend's sake, but because they deliver better results."
+        "title": "Nature",
+        "description": "The Bavarian Forest as a backdrop — the route runs through real mountain terrain."
       },
       "accessibility": {
-        "title": "Accessibility",
-        "description": "Our websites are usable for everyone. Accessibility isn't a feature — it's the standard."
+        "title": "Open to all",
+        "description": "Whether competitive athlete or leisure rider — everyone is welcome at Arberblitz."
       }
     },
     "stats": {
-      "projects": "Projects",
-      "satisfaction": "Client satisfaction",
-      "technologies": "Technologies",
-      "languages": "Languages"
+      "projects": "Participants",
+      "satisfaction": "Elevation metres",
+      "technologies": "Kilometres",
+      "languages": "Categories"
     }
   },
   "legal": {
@@ -197,63 +179,5 @@
     "feature": "Feature",
     "yes": "Yes",
     "no": "No"
-  },
-  "careers": {
-    "title": "Careers",
-    "description": "Join our team. Open positions at Greenleaf Digital.",
-    "apply": "Apply now",
-    "openPosition": "Open position",
-    "postedOn": "Posted on",
-    "closesOn": "Closes on",
-    "noOpenings": "No open positions currently",
-    "backToCareers": "Back to Careers",
-    "opensInNewTab": "Opens in a new tab",
-    "employmentType": {
-      "full-time": "Full-time",
-      "part-time": "Part-time",
-      "contractor": "Contractor",
-      "internship": "Internship"
-    }
-  },
-  "events": {
-    "title": "Events",
-    "description": "Webinars, workshops and conferences by Greenleaf Digital.",
-    "noResults": "No events found.",
-    "register": "Register now",
-    "details": "View details",
-    "backToEvents": "Back to events",
-    "dateTime": "Date & Time",
-    "speakers": "Speakers",
-    "openMap": "View on map",
-    "location": {
-      "online": "Online",
-      "inPerson": "In person",
-      "hybrid": "Hybrid (in person + online)",
-      "atVenue": "Venue"
-    },
-    "filter": {
-      "category": "Category",
-      "tag": "Topic"
-    }
-  },
-  "caseStudies": {
-    "title": "Case Studies",
-    "description": "See how our clients benefit from working with Greenleaf Digital.",
-    "noResults": "No case studies found.",
-    "readMore": "Read more",
-    "watchInterview": "Watch interview",
-    "videoAvailable": "Video available",
-    "tagsLabel": "Topics",
-    "filterCategory": "Category",
-    "filterTag": "Topic",
-    "backToCaseStudies": "Back to case studies",
-    "siblingNav": "More case studies",
-    "previousReference": "Previous",
-    "nextReference": "Next",
-    "srName": "Name",
-    "srRole": "Role",
-    "srCompany": "Company",
-    "quoteOpen": "“",
-    "quoteClose": "”"
   }
 }

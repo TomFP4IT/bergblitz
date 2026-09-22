@@ -18,13 +18,13 @@
   --color-muted: #6b7280;
 
   /* Accent */
-  --color-accent: #6366f1;
-  --color-accent-hover: #4f46e5;
-  --color-accent-glow: #818cf8;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-accent-glow: #60a5fa;
 
-  /* Warm accent (from the passionfruit flesh) */
-  --color-warm: #f59e0b;
-  --color-warm-muted: #fbbf24;
+  /* Warm accent */
+  --color-warm: #1d4ed8;
+  --color-warm-muted: #93c5fd;
 
   /* Borders */
   --color-border: #e2e4eb;

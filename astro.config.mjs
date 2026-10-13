@@ -25,7 +25,7 @@ const externalLinks = {
 };
 
 export default defineConfig({
-  site: "https://arberblitz.de",
+  site: "https://bergblitz.fischer-tom.de",
   output: "static",
   compressHTML: true,
   trailingSlash: "always",
@@ -37,9 +37,6 @@ export default defineConfig({
     defaultLocale: "de",
     routing: {
       prefixDefaultLocale: false,
-    },
-    fallback: {
-      en: "de",
     },
   },
   integrations: [react()],

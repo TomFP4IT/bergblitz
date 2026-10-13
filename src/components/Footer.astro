@@ -110,23 +110,11 @@ const legalLinks: NavLink[] = [
       <p class="text-sm text-text-on-dark/60">
         {t("footer.copyright", { year: currentYear })}
       </p>
-      <p class="text-sm text-text-on-dark/40">
-        {t("footer.builtWith").split("passionfruit")[0]}<a
-          href="https://github.com/passion4it-gmbh/passionfruit"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-text-on-dark/60 hover:text-text-on-dark transition-colors duration-[var(--transition-fast)] underline underline-offset-2"
-          >passionfruit</a
-        >{t("footer.builtWith").split("passionfruit")[1]} by{" "}
-        <a
-          href="https://passion4it.de"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-text-on-dark/60 hover:text-text-on-dark transition-colors duration-[var(--transition-fast)] underline underline-offset-2"
-        >
-          PASSION4IT
-        </a>
-      </p>
+      {
+        t("footer.builtWith") && (
+          <p class="text-sm text-text-on-dark/40">{t("footer.builtWith")}</p>
+        )
+      }
     </div>
   </div>
 </footer>

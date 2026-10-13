@@ -6,28 +6,28 @@
 
 @theme {
   /* Surfaces */
-  --color-surface: #fafbfc;
-  --color-surface-elevated: #ffffff;
-  --color-surface-dark: #0c0c1d;
-  --color-surface-dark-elevated: #14142b;
+  --color-surface: #f7f3ee;
+  --color-surface-elevated: #efe3d1;
+  --color-surface-dark: #122d28;
+  --color-surface-dark-elevated: #18453d;
 
   /* Text */
-  --color-text: #3d4156;
-  --color-text-heading: #12132d;
-  --color-text-on-dark: #f0f0f5;
-  --color-muted: #6b7280;
+  --color-text: #18312b;
+  --color-text-heading: #18312b;
+  --color-text-on-dark: #f7f3ee;
+  --color-muted: #4a5d57;
 
   /* Accent */
-  --color-accent: #3b82f6;
-  --color-accent-hover: #2563eb;
-  --color-accent-glow: #60a5fa;
+  --color-accent: #d97706;
+  --color-accent-hover: #b45309;
+  --color-accent-glow: #f7b267;
 
   /* Warm accent */
-  --color-warm: #1d4ed8;
-  --color-warm-muted: #93c5fd;
+  --color-warm: #f59e0b;
+  --color-warm-muted: #fcd68a;
 
   /* Borders */
-  --color-border: #e2e4eb;
+  --color-border: #d9d0c5;
 
   /* Font families */
   --font-heading: "Inter Variable", system-ui, sans-serif;

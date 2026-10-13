@@ -2,6 +2,8 @@ allowBuilds:
   esbuild: true
   lefthook: true
   sharp: true
+  # installed on the fly by cloudflare/wrangler-action in the deploy workflow
+  workerd: true
 minimumReleaseAgeExclude:
   - "@lucide/astro@1.17.0"
   - lucide-react@1.17.0

@@ -18,7 +18,7 @@
     "lint:a11y": "eslint --config eslint.astro.config.mjs 'src/**/*.astro'",
     "test": "node --test scripts/check-bilingual.test.mjs scripts/check-component-docs.test.mjs scripts/check-fixtures.test.mjs && pnpm test:og && pnpm test:functions",
     "test:og": "tsx --test scripts/generate-og.test.ts",
-    "test:functions": "tsx --test functions/api/*.test.ts",
+    "test:functions": "tsx --test functions/api/*.test.ts functions/_middleware.test.ts",
     "check:spelling": "cspell \"src/content/**/*.md\" --no-progress",
     "check:links": "linkinator ./dist --recurse --skip \"^(?!http://localhost)\" --verbosity error",
     "check:all": "pnpm check:spelling && pnpm lint:a11y && pnpm build && pnpm check:links",

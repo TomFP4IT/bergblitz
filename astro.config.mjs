@@ -25,7 +25,7 @@ const externalLinks = {
 };
 
 export default defineConfig({
-  site: "https://www.fischer-tom.de",
+  site: "https://bergblitz.fischer-tom.de",
   output: "static",
   compressHTML: true,
   trailingSlash: "always",

@@ -46,7 +46,7 @@ function collectStaticBlocks(site: URL): string[] {
 }
 
 export const GET: APIRoute = ({ site }) => {
-  const siteUrl = site ?? new URL("https://www.fischer-tom.de");
+  const siteUrl = site ?? new URL("https://bergblitz.fischer-tom.de");
 
   const urlBlocks = collectStaticBlocks(siteUrl);
 

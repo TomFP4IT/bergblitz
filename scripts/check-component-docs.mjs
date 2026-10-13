@@ -229,7 +229,8 @@ function renderCatalogBlock(sidecars, claudeDir) {
     lines.push("| Component | Status | One-liner | Docs |");
     lines.push("| --- | --- | --- | --- |");
     for (const s of groups.get(tag)) {
-      const rel = relative(claudeDir, s.path);
+      // POSIX separators so the catalog is identical on Windows and CI
+      const rel = relative(claudeDir, s.path).replaceAll("\\", "/");
       // Ensure link starts with "./" for markdown convention
       const link = rel.startsWith(".") ? rel : `./${rel}`;
       const filename = basename(s.path);
